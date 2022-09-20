@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
+import dice from './images/icon-dice.svg';
 
 function App() {
   const [advice, setAdvice] = useState("");
@@ -15,7 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="advice">{advice}</h1>
+      <div className="advice-container">
+        <h1 className="advice-number">Advice #117</h1>
+        <h1 className="advice-text">{advice}</h1>
+        <div className="advice-button">
+          <img src={dice} alt="dice" />
+        </div>
+      </div>
     </div>
   );
 }
