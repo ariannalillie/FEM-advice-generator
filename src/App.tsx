@@ -5,10 +5,12 @@ import dice from "./images/icon-dice.svg";
 
 function App() {
   const [advice, setAdvice] = useState("");
+  const [number, setNumber] = useState("");
 
   const fetchData = async () => {
     const data = await axios.get("https://api.adviceslip.com/advice");
     setAdvice(data.data.slip.advice);
+   setNumber(data.data.slip.id);
   };
 
   useEffect(() => {
@@ -22,10 +24,10 @@ function App() {
   return (
     <div className="App">
       <div className="advice-container">
-        <h1 className="advice-number">Advice #117</h1>
+        <h1 className="advice-number">{`ADVICE #${number}`}</h1>
         <h1 className="advice-text">{`"${advice}"`}</h1>
         <div className="advice-button" onClick={HandleClick}>
-          <img src={dice} alt="dice" />
+          <img src={dice} alt="dice" className="dice"/>
         </div>
       </div>
     </div>
