@@ -21,6 +21,10 @@ body {
   cursor: pointer;
 }
 
+.advice-button:hover {
+  box-shadow: 0 5px 20px rgba(93, 234, 138, 0.504);
+}
+
 .advice-container {
   background-color: hsl(217, 19%, 24%);
   display: flex;
@@ -43,4 +47,9 @@ body {
   color: hsl(216, 44%, 75%);
   font-size: 1.8rem;
   padding: 15px;
+}
+
+.dice {
+  height: 15px;
+  width: 15px;
 }
