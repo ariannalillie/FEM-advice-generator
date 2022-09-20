@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import dice from "./images/icon-dice.svg";
+import patternDivider from "./images/pattern-divider-desktop.svg";
 
 function App() {
   const [advice, setAdvice] = useState("");
@@ -26,6 +27,9 @@ function App() {
       <div className="advice-container">
         <h1 className="advice-number">{`ADVICE #${number}`}</h1>
         <h1 className="advice-text">{`"${advice}"`}</h1>
+        <div className="bottom">
+          <img src={patternDivider} alt="pattern-divider" />
+        </div>
         <div className="advice-button" onClick={HandleClick}>
           <img src={dice} alt="dice" className="dice"/>
         </div>
